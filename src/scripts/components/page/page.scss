@@ -1,0 +1,26 @@
+@import '@styles/h5p-topic-map-set-main';
+
+.h5p-topic-map-set-page {
+  float: left;
+  margin-left: -100%;
+  position: relative;
+  transition: left .35s;
+  width: 100%;
+
+  &.past {
+    left: 0%;
+  }
+
+  &.present {
+    left: 100%;
+    z-index: 2;
+  }
+
+  &.future {
+    left: 200%;
+  }
+
+  &.display-none {
+    display: none;
+  }
+}

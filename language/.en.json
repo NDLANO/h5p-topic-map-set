@@ -1,0 +1,89 @@
+{
+  "semantics": [
+    {
+      "label": "List of contents",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "entity": "content",
+      "field": {
+        "fields": [
+          {
+            "label": "Content"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Behavioural settings",
+      "fields": [
+        {
+          "label": "Enable header toolbar"
+        },
+        {
+          "label": "Enable footer toolbar"
+        },
+        {
+          "label": "Cycle through contents",
+          "description": "Go back to first item after last and vide versa."
+        },
+        {
+          "label": "Display current page in toolbar"
+        },
+        {
+          "label": "Display content title in toolbar"
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Page announcement",
+          "default": "@current / @total",
+          "description": "@current and @total are placeholders and will be replaced by the respective values."
+        },
+        {
+          "label": "Content without a title",
+          "default": "Untitled"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Previous content",
+          "default": "Go to previous content."
+        },
+        {
+          "label": "Next content",
+          "default": "Go to next content."
+        },
+        {
+          "label": "Previous content disabled",
+          "default": "Going to previous content is currently not possible."
+        },
+        {
+          "label": "Next content disabled",
+          "default": "Going to next content is currently not possible."
+        },
+        {
+          "label": "Moved to page",
+          "default": "Moved to page @current of @total.",
+          "description": "@current and @total are placeholders and will be replaced by the respective values."
+        },
+        {
+          "label": "Top navigation",
+          "default": "Top navigation bar"
+        },
+        {
+          "label": "Bottom navigation",
+          "default": "Bottom navigation bar"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "name": "content",
+    "type": "list",
+    "label": "List of contents",
+    "importance": "high",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "min": 1,
+    "entity": "content",
+    "field": {
+      "name": "content",
+      "type": "group",
+      "fields": [
+        {
+          "name": "libraryParams",
+          "type": "library",
+          "label": "Content",
+          "importance": "high",
+          "options": [
+            "H5P.TopicMap 0.1"
+          ]
+        },
+        {
+          "name": "Dummy",
+          "type": "boolean",
+          "widget": "none"
+        }
+      ]
+    }
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "importance": "low",
+    "label": "Behavioural settings",
+    "fields": [
+      {
+        "type": "boolean",
+        "name": "toolbarHeader",
+        "label": "Enable header toolbar",
+        "default": false
+      },
+      {
+        "name": "toolbarFooter",
+        "type": "boolean",
+        "label": "Enable footer toolbar",
+        "default": true
+      },
+      {
+        "name": "cycle",
+        "type": "boolean",
+        "label": "Cycle through contents",
+        "description": "Go back to first item after last and vide versa.",
+        "default": false
+      },
+      {
+        "name": "displayPageAnnouncement",
+        "type": "boolean",
+        "label": "Display current page in toolbar",
+        "default": true
+      },
+      {
+        "name": "displayContentAnnouncement",
+        "type": "boolean",
+        "label": "Display content title in toolbar",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "pageAnnouncement",
+        "type": "text",
+        "label": "Page announcement",
+        "default": "@current / @total",
+        "description": "@current and @total are placeholders and will be replaced by the respective values."
+      },
+      {
+        "name": "noTitle",
+        "type": "text",
+        "label": "Content without a title",
+        "default": "Untitled"
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "previousContent",
+        "type": "text",
+        "label": "Previous content",
+        "default": "Go to previous content."
+      },
+      {
+        "name": "nextContent",
+        "type": "text",
+        "label": "Next content",
+        "default": "Go to next content."
+      },
+      {
+        "name": "previousContentDisabled",
+        "type": "text",
+        "label": "Previous content disabled",
+        "default": "Going to previous content is currently not possible."
+      },
+      {
+        "name": "nextContentDisabled",
+        "type": "text",
+        "label": "Next content disabled",
+        "default": "Going to next content is currently not possible."
+      },
+      {
+        "name": "movedTo",
+        "type": "text",
+        "label": "Moved to page",
+        "default": "Moved to page @current of @total.",
+        "description": "@current and @total are placeholders and will be replaced by the respective values."
+      },
+      {
+        "name": "navigationTop",
+        "type": "text",
+        "label": "Top navigation",
+        "default": "Top navigation bar"
+      },
+      {
+        "name": "navigationBottom",
+        "type": "text",
+        "label": "Bottom navigation",
+        "default": "Bottom navigation bar"
+      }
+    ]
+  }
+]

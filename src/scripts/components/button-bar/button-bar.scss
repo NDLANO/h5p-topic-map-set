@@ -1,0 +1,34 @@
+@import '@styles/h5p-topic-map-set-main';
+
+.h5p-topic-map-set-button-bar {
+  --button-size: 3em;
+  --background-size: 1.25em;
+  --border-size: 2px;
+
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin: 0.5em;
+  overflow: hidden;
+
+  .h5p-topic-map-set-page-announcer {
+    flex-grow: 1;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-align: center;
+
+    .highlighted {
+      color: var(--color-primary);
+    }
+  }
+
+  &.border-bottom {
+    box-shadow: 0.125em 0.125em 0.25em var(--color-box-shadow);
+  }
+
+  &.border-top {
+    box-shadow: 0.125em 0.125em 0.5em var(--color-box-shadow);
+  }
+}
