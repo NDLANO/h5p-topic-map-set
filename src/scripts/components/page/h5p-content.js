@@ -190,7 +190,8 @@ export default class H5PContent {
       return this.instance.getTitle();
     }
 
-    return this.params.metadata?.title || Dictionary.get('l10n.noTitle');
+    return this.params?.libraryParams?.metadata?.title ||
+      Dictionary.get('l10n.noTitle');
   }
 
   /**
