@@ -7,9 +7,9 @@ import './button-bar.scss';
 export default class ButtonBar {
   /**
    * @class
-   * @param {object} [params={}] Parameters.
+   * @param {object} [params] Parameters.
    * @param {string} [params.position] Extra borders.
-   * @param {object} [callbacks={}] Callbacks.
+   * @param {object} [callbacks] Callbacks.
    * @param {function} [callbacks.onClickButtonLeft] Callback for left button.
    * @param {function} [callbacks.onClickButtonRight] Callback for right button.
    */
@@ -98,7 +98,6 @@ export default class ButtonBar {
 
   /**
    * Return the DOM for this class.
-   *
    * @returns {HTMLElement} DOM for this class.
    */
   getDOM() {
@@ -107,7 +106,6 @@ export default class ButtonBar {
 
   /**
    * Set round announcer text.
-   *
    * @param {string} html Round announcer text.
    */
   setAnnouncerText(html) {
@@ -118,7 +116,6 @@ export default class ButtonBar {
 
   /**
    * Set button tabbable.
-   *
    * @param {string} name Name of the button.
    */
   setButtonTabbable(name) {
@@ -137,7 +134,6 @@ export default class ButtonBar {
 
   /**
    * Handle key down.
-   *
    * @param {KeyboardEvent} event Keyboard event.
    */
   handleKeydown(event) {
@@ -173,7 +169,6 @@ export default class ButtonBar {
 
   /**
    * Enable button.
-   *
    * @param {string} id Button id.
    */
   enableButton(id = '') {
@@ -186,7 +181,6 @@ export default class ButtonBar {
 
   /**
    * Disable button.
-   *
    * @param {string} id Button id.
    */
   disableButton(id = '') {
@@ -199,7 +193,6 @@ export default class ButtonBar {
 
   /**
    * Show button.
-   *
    * @param {string} id Button id.
    */
   showButton(id = '') {
@@ -212,7 +205,6 @@ export default class ButtonBar {
 
   /**
    * Hide button.
-   *
    * @param {string} id Button id.
    */
   hideButton(id = '') {
@@ -225,7 +217,6 @@ export default class ButtonBar {
 
   /**
    * Focus a button.
-   *
    * @param {string} id Button id.
    */
   focus(id = '') {

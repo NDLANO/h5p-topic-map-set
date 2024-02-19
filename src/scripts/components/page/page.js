@@ -5,7 +5,7 @@ import './page.scss';
 export default class Page {
   /**
    * @class
-   * @param {object} [params={}] Parameters.
+   * @param {object} [params] Parameters.
    * @param {number} params.index Index of page.
    * @param {object} params.libraryParams Library parameters for content.
    */
@@ -31,7 +31,6 @@ export default class Page {
 
   /**
    * Get DOM.
-   *
    * @returns {HTMLElement} Content DOM.
    */
   getDOM() {
@@ -40,8 +39,7 @@ export default class Page {
 
   /**
    * Update page.
-   *
-   * @param {object} [params={}] Parameters.
+   * @param {object} [params] Parameters.
    */
   update(params = {}) {
     if (typeof params.visible === 'boolean') {
@@ -51,7 +49,6 @@ export default class Page {
 
   /**
    * Get title.
-   *
    * @returns {string} title.
    */
   getTitle() {
@@ -60,7 +57,6 @@ export default class Page {
 
   /**
    * Get xAPI data from exercises.
-   *
    * @returns {object} XAPI data objects used to build report.
    */
   getXAPIData() {
@@ -69,7 +65,6 @@ export default class Page {
 
   /**
    * Register callback to call once the next transition has ended.
-   *
    * @param {function} callback Callback when transition has ended.
    */
   registerTransitionEnd(callback) {
@@ -82,7 +77,6 @@ export default class Page {
 
   /**
    * Find first focusable element and set focus.
-   *
    * @returns {boolean} True if could focus on first child, else false.
    */
   focusFirstChild() {
@@ -91,7 +85,6 @@ export default class Page {
 
   /**
    * Set position.
-   *
    * @param {number} position negative = past, 0 = present, positive = future.
    */
   setPosition(position) {
@@ -102,7 +95,6 @@ export default class Page {
 
   /**
    * Check if result has been submitted or input has been given.
-   *
    * @returns {boolean} True, if answer was given.
    */
   getAnswerGiven() {
@@ -111,7 +103,6 @@ export default class Page {
 
   /**
    * Get current score.
-   *
    * @returns {number} Current score.
    */
   getScore() {
@@ -120,7 +111,6 @@ export default class Page {
 
   /**
    * Get maximum possible score.
-   *
    * @returns {number} Score necessary for mastering.
    */
   getMaxScore() {
@@ -143,7 +133,6 @@ export default class Page {
 
   /**
    * Return H5P core's call to store current state.
-   *
    * @returns {object} Current state.
    */
   getCurrentState() {

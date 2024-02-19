@@ -6,10 +6,10 @@ export default class H5PContent {
 
   /**
    * @class
-   * @param {object} [params={}] Parameters.
+   * @param {object} [params] Parameters.
    * @param {number} params.index Index of page.
    * @param {object} params.libraryParams Library parameters for content.
-   * @param {object} [callbacks={}] Callbacks.
+   * @param {object} [callbacks] Callbacks.
    */
   constructor(params = {}, callbacks = {}) {
     this.params = Util.extend({
@@ -28,7 +28,6 @@ export default class H5PContent {
 
   /**
    * Get DOM with H5P exercise.
-   *
    * @returns {HTMLElement} DOM with H5P exercise.
    */
   getDOM() {
@@ -37,7 +36,6 @@ export default class H5PContent {
 
   /**
    * Get xAPI data from exercises.
-   *
    * @returns {object} XAPI data objects used to build report.
    */
   getXAPIData() {
@@ -98,7 +96,6 @@ export default class H5PContent {
 
   /**
    * Make it easy to bubble events from child to parent.
-   *
    * @param {object} origin Origin of event.
    * @param {string} eventName Name of event.
    * @param {object} target Target to trigger event on.
@@ -118,7 +115,6 @@ export default class H5PContent {
 
   /**
    * Make it easy to bubble events from parent to children.
-   *
    * @param {object} origin Origin of event.
    * @param {string} eventName Name of event.
    * @param {object[]} targets Targets to trigger event on.
@@ -159,7 +155,6 @@ export default class H5PContent {
 
   /**
    * Find first focusable element and set focus.
-   *
    * @returns {boolean} True if could focus on first child, else false.
    */
   focusFirstChild() {
@@ -188,7 +183,6 @@ export default class H5PContent {
 
   /**
    * Get content title.
-   *
    * @returns {string} Content title.
    */
   getTitle() {
@@ -201,7 +195,6 @@ export default class H5PContent {
 
   /**
    * Check if result has been submitted or input has been given.
-   *
    * @returns {boolean} True, if answer was given.
    */
   getAnswerGiven() {
@@ -210,7 +203,6 @@ export default class H5PContent {
 
   /**
    * Get current score.
-   *
    * @returns {number} Current score.
    */
   getScore() {
@@ -219,7 +211,6 @@ export default class H5PContent {
 
   /**
    * Get maximum possible score.
-   *
    * @returns {number} Score necessary for mastering.
    */
   getMaxScore() {
@@ -258,7 +249,6 @@ export default class H5PContent {
 
   /**
    * Return H5P core's call to store current state.
-   *
    * @returns {object} Current state.
    */
   getCurrentState() {

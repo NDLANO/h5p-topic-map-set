@@ -12,8 +12,8 @@ import './main.scss';
 export default class Main {
   /**
    * @class
-   * @param {object} [params={}] Parameters.
-   * @param {object} [callbacks={}] Callbacks.
+   * @param {object} [params] Parameters.
+   * @param {object} [callbacks] Callbacks.
    * @param {object} [callbacks.onProgressed] Callback when user progressed.
    */
   constructor(params = {}, callbacks = {}) {
@@ -86,7 +86,6 @@ export default class Main {
 
   /**
    * Get DOM.
-   *
    * @returns {HTMLElement} Content DOM.
    */
   getDOM() {
@@ -95,7 +94,6 @@ export default class Main {
 
   /**
    * Get current page index.
-   *
    * @returns {number} Current page index.
    */
   getCurrentPageIndex() {
@@ -133,9 +131,8 @@ export default class Main {
 
   /**
    * Swipe to page.
-   *
-   * @param {number} [to=-1] Page number to swipe to.
-   * @param {object} [options={}] Options.
+   * @param {number} [to] Page number to swipe to.
+   * @param {object} [options] Options.
    * @param {boolean} [options.skipFocus] If true, skip focus after swiping.
    */
   swipeTo(to = -1, options = {}) {
@@ -206,8 +203,7 @@ export default class Main {
 
   /**
    * Handle updating page positions ended.
-   *
-   * @param {object} [options={}] Options.
+   * @param {object} [options] Options.
    */
   handleUpdatePagePositionsEnded(options = {}) {
     this.pages.forEach((page, index) => {
@@ -299,7 +295,6 @@ export default class Main {
 
   /**
    * Check if result has been submitted or input has been given.
-   *
    * @returns {boolean} True, if answer was given.
    */
   getAnswerGiven() {
@@ -308,7 +303,6 @@ export default class Main {
 
   /**
    * Get current score.
-   *
    * @returns {number} Current score.
    */
   getScore() {
@@ -319,7 +313,6 @@ export default class Main {
 
   /**
    * Get maximum possible score.
-   *
    * @returns {number} Score necessary for mastering.
    */
   getMaxScore() {
@@ -350,7 +343,6 @@ export default class Main {
 
   /**
    * Get xAPI data from exercises.
-   *
    * @returns {object[]} XAPI data objects used to build report.
    */
   getXAPIData() {
@@ -363,7 +355,6 @@ export default class Main {
 
   /**
    * Return H5P core's call to store current state.
-   *
    * @returns {object} Current state.
    */
   getCurrentState() {

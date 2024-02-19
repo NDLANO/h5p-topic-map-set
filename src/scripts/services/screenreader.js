@@ -2,7 +2,6 @@ export default class Screenreader {
 
   /**
    * Get Live region DOM.
-   *
    * @returns {HTMLElement} Live region DOM.
    */
   static getDOM() {
@@ -11,7 +10,6 @@ export default class Screenreader {
 
   /**
    * Set class if default CSS values do not suffice.
-   *
    * @param {string} className Class name to set. Add CSS elsewhere.
    */
   static setClass(className) {
@@ -32,7 +30,6 @@ export default class Screenreader {
 
   /**
    * Read text via aria live region.
-   *
    * @param {string} text Text to read.
    */
   static read(text) {

@@ -8,7 +8,7 @@ export default class TopicMapSet extends H5P.EventDispatcher {
    * @class
    * @param {object} params Parameters passed by the editor.
    * @param {number} contentId Content's id.
-   * @param {object} [extras = {}] Saved state, metadata, etc.
+   * @param {object} [extras] Saved state, metadata, etc.
    */
   constructor(params, contentId, extras = {}) {
     super();
@@ -93,7 +93,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Attach DOM to H5P wrapper.
-   *
    * @param {H5P.jQuery} $wrapper H5P wrapper.
    */
   attach($wrapper) {
@@ -102,7 +101,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get tasks title.
-   *
    * @returns {string} Title.
    */
   getTitle() {
@@ -118,7 +116,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get tasks description.
-   *
    * @returns {string} Description.
    */
   getDescription() {
@@ -127,7 +124,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get context data. Contract used for confusion report.
-   *
    * @returns {object} Context data.
    */
   getContext() {
@@ -139,7 +135,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Check if result has been submitted or input has been given.
-   *
    * @returns {boolean} True, if answer was given.
    */
   getAnswerGiven() {
@@ -148,7 +143,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get current score.
-   *
    * @returns {number} Current score.
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-2}
    */
@@ -158,7 +152,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get maximum possible score.
-   *
    * @returns {number} Score necessary for mastering.
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-3}
    */
@@ -168,7 +161,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Show solutions.
-   *
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-4}
    */
   showSolutions() {
@@ -177,7 +169,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Reset task.
-   *
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-5}
    */
   resetTask() {
@@ -186,7 +177,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get xAPI data.
-   *
    * @returns {object} XAPI statement.
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
    */
@@ -211,7 +201,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Trigger xAPI event.
-   *
    * @param {string} verb Short id of the verb we want to trigger.
    */
   triggerXAPIEvent(verb) {
@@ -221,7 +210,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Create an xAPI event.
-   *
    * @param {string} verb Short id of the verb we want to trigger.
    * @returns {H5P.XAPIEvent} Event template.
    */
@@ -244,7 +232,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Get the xAPI definition for the xAPI object.
-   *
    * @returns {object} XAPI definition.
    */
   getXAPIDefinition() {
@@ -268,7 +255,6 @@ export default class TopicMapSet extends H5P.EventDispatcher {
 
   /**
    * Return H5P core's call to store current state.
-   *
    * @returns {object} Current state.
    */
   getCurrentState() {

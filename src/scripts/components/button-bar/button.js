@@ -79,7 +79,6 @@ export default class Button {
 
   /**
    * Return the DOM for this class.
-   *
    * @returns {HTMLElement} DOM for this class.
    */
   getDOM() {
@@ -109,7 +108,6 @@ export default class Button {
 
   /**
    * Set tabbable or not.
-   *
    * @param {boolean} tabbable If true, set tabbable. If false, untabbable.
    */
   setTabbable(tabbable) {
@@ -201,7 +199,6 @@ export default class Button {
 
   /**
    * Set attribute.
-   *
    * @param {string} attribute Attribute key.
    * @param {string} value Attribute value.
    */
@@ -211,7 +208,6 @@ export default class Button {
 
   /**
    * Determine whether button is active.
-   *
    * @returns {boolean} True, if button is active, else false.
    */
   isActive() {
@@ -220,7 +216,6 @@ export default class Button {
 
   /**
    * Determine whether button is disabled.
-   *
    * @returns {boolean} True, if button is disabled, else false.
    */
   isDisabled() {
