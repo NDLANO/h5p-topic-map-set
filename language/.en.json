@@ -12,7 +12,8 @@
         "fields": [
           {
             "label": "Content"
-          }
+          },
+          {}
         ]
       }
     },

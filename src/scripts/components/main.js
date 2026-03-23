@@ -1,9 +1,9 @@
-import Dictionary from '@services/dictionary';
-import Globals from '@services/globals';
-import Screenreader from '@services/screenreader';
-import Util from '@services/util';
-import ButtonBar from '@components/button-bar/button-bar';
-import Page from '@components/page/page';
+import Dictionary from '@services/dictionary.js';
+import Globals from '@services/globals.js';
+import Screenreader from '@services/screenreader.js';
+import Util from '@services/util.js';
+import ButtonBar from '@components/button-bar/button-bar.js';
+import Page from '@components/page/page.js';
 import './main.scss';
 
 /**

@@ -1,6 +1,6 @@
-import Dictionary from '@services/dictionary';
-import Globals from '@services/globals';
-import Util from '@services/util';
+import Dictionary from '@services/dictionary.js';
+import Globals from '@services/globals.js';
+import Util from '@services/util.js';
 
 export default class H5PContent {
 

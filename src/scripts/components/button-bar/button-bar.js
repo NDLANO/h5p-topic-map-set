@@ -1,6 +1,6 @@
-import Button from './button';
-import Dictionary from '@services/dictionary';
-import Util from '@services/util';
+import Button from './button.js';
+import Dictionary from '@services/dictionary.js';
+import Util from '@services/util.js';
 import * as DOMPurify from 'dompurify';
 import './button-bar.scss';
 

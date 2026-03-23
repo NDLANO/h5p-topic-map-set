@@ -1,5 +1,5 @@
-import Util from '@services/util';
-import H5PContent from './h5p-content';
+import Util from '@services/util.js';
+import H5PContent from './h5p-content.js';
 import './page.scss';
 
 export default class Page {

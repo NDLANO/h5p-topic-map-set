@@ -15,6 +15,7 @@
     "h5p",
     "library"
   ],
+  "type": "module",
   "author": "Oliver Tacke",
   "license": "MIT",
   "devDependencies": {
@@ -24,8 +25,6 @@
     "babel-loader": "^10.1.1",
     "cross-env": "^10.1.0",
     "css-loader": "^7.1.4",
-    "eslint": "^8.57.1",
-    "eslint-plugin-jsdoc": "^62.8.0",
     "eslint-config-ndla-h5p": "github:ndlano/eslint-config-ndla-h5p",
     "mini-css-extract-plugin": "^2.10.1",
     "regenerator-runtime": "^0.14.1",
