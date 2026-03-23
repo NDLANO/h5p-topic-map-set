@@ -1,4 +1,6 @@
-@import '@styles/h5p-topic-map-set-main';
+html {
+  box-sizing: border-box;
+}
 
 .h5p-topic-map-set {
   --color-box-shadow: rgb(166 166 166 / 20%);

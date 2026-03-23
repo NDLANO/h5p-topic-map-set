@@ -1,7 +1,7 @@
 import Button from './button.js';
 import Dictionary from '@services/dictionary.js';
 import Util from '@services/util.js';
-import * as DOMPurify from 'dompurify';
+import { default as DOMPurify } from 'dompurify';
 import './button-bar.scss';
 
 export default class ButtonBar {

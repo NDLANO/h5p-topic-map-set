@@ -1,54 +1,59 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import process from 'node:process';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-const nodeEnv = process.env.NODE_ENV || 'development';
-const libraryName = process.env.npm_package_name;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports = {
-  mode: nodeEnv,
-  resolve: {
-    alias: {
-      '@components': path.resolve(__dirname, 'src/scripts/components'),
-      '@scripts': path.resolve(__dirname, 'src/scripts'),
-      '@services': path.resolve(__dirname, 'src/scripts/services'),
-      '@styles': path.resolve(__dirname, 'src/styles')
-    }
-  },
-  optimization: {
-    minimize: nodeEnv === 'production',
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          compress: {
-            drop_console: true,
-          }
-        }
-      })
-    ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: `${libraryName}.css`
-    })
-  ],
+const mode = process.argv.includes('--mode=production') ?
+  'production' : 'development';
+
+export default {
+  mode: mode,
   entry: {
-    dist: './src/entries/dist.js'
+    'h5p-sequence-process': path.join(__dirname, 'src', 'entries/dist.js')
   },
   output: {
-    filename: `${libraryName}.js`,
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    clean: true
   },
   target: ['browserslist'],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    })
+  ],
+  resolve: {
+    alias: {
+      '@assets': path.resolve(__dirname, 'assets'),
+      '@components': path.resolve(__dirname, 'src/scripts/components'),
+      '@context': path.resolve(__dirname, 'src/scripts/context'),
+      '@models': path.resolve(__dirname, 'src/scripts/models'),
+      '@root': path.resolve(__dirname, '.'),
+      '@scripts': path.resolve(__dirname, 'src/scripts'),
+      '@services': path.resolve(__dirname, 'src/scripts/services'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+    },
+    modules: [
+      path.resolve('./src'),
+      path.resolve('./node_modules')
+    ]
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.(s[ac]ss|css)$/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -56,28 +61,35 @@ module.exports = {
               publicPath: ''
             }
           },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
         ]
       },
       {
-        test: /\.svg|\.jpg|\.png$/,
-        include: path.join(__dirname, 'src/images'),
-        type: 'asset/resource'
-      },
-      {
-        test: /\.woff$/,
-        include: path.join(__dirname, 'src/fonts'),
+        test: /\.(png|woff|woff2|eot|ttf|svg|gif|docx)$/,
+        include: [
+          path.resolve(__dirname, 'assets'),
+        ],
         type: 'asset/resource'
       }
     ]
   },
-  stats: {
-    colors: true
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
   },
-  ...(nodeEnv !== 'production' && { devtool: 'eval-cheap-module-source-map' })
+  ...(mode !== 'production' && { devtool: 'eval-cheap-module-source-map' })
 };
