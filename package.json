@@ -1,6 +1,5 @@
 {
   "name": "h5p-topic-map-set",
-  "version": "1.0.0",
   "description": "Topic Map Set (Proof of Concept)",
   "private": true,
   "scripts": {
